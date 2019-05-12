@@ -5,6 +5,11 @@ const adminprefix = "B";
 const devs = ['538676483455975431'];
 meercy.on('message', message => {
     console.log("oNNN");
+    
+meercy.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+  meercy.user.setStatus("idle")
+});     
 
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
