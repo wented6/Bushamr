@@ -23,11 +23,11 @@ return message.reply("**لا يمكنك تغيير الاسم يجب عليك ا
 meercy.user.setAvatar(argresult);
   message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
       } else     
-if (message.content.startsWith('ls')) {
+if (message.content.startsWith(adminprefix + 'ls')) {
    meercy.user.setActivity(argresult, {type:'Listening'});
     message.channel.send(` تم تغير اللسننق ألى **${argresult} \** `)
 } else        
-if (message.content.startsWith('wt')) {
+if (message.content.startsWith(adminprefix + 'wt')) {
    meercy.user.setActivity(argresult, {type:'Watching'});
     message.channel.send(` تم تغير الواتشنق ألى **${argresult} \** `)
 }
@@ -36,7 +36,6 @@ if (message.content.startsWith('wt')) {
 
 
 meercy.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
   meercy.user.setStatus("idle")
 }); 
 
