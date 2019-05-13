@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const meercy = new Discord.Client();
 
 const adminprefix = "B";
-const devs = ['564794492473835520'];
+const devs = ['564794492473835520','538676483455975431'];
 meercy.on('message', message => {
     console.log("oNNN");
      
