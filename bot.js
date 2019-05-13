@@ -5,11 +5,7 @@ const adminprefix = "B";
 const devs = ['564794492473835520'];
 meercy.on('message', message => {
     console.log("oNNN");
-    
-meercy.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-  meercy.user.setStatus("idle")
-});     
+     
 
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
@@ -36,4 +32,13 @@ if (message.content.startsWith('wt')) {
     message.channel.send(` تم تغير الواتشنق ألى **${argresult} \** `)
 }
 });
+
+
+
+meercy.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+  meercy.user.setStatus("idle")
+}); 
+
+
  meercy.login(process.env.B);
